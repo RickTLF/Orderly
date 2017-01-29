@@ -1,5 +1,6 @@
 package com.systems.sublime.orderly;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ListFragment;
@@ -22,9 +23,12 @@ public class AgendaFragment extends ListFragment {
             "item 3",
     };
 
+
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+
 
         ArrayAdapter adapter = new ArrayAdapter<String>(getActivity(), R.layout.agenda_list_item, agendaItems);
         setListAdapter(adapter);
@@ -33,6 +37,8 @@ public class AgendaFragment extends ListFragment {
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
+        final MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.menu_click);
+        mp.start();
     }
 
     /**
