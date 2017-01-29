@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/agenda_list_item"
+    android:textAppearance="?android:attr/textAppearanceListItemSmall"
+    android:layout_width="match_parent"
+    android:background="#000000"
+    android:fontFamily="sans-serif-light"
+    android:textColor="#FFFFFF"
+    android:gravity="center_vertical"
+    android:paddingLeft="?android:attr/listPreferredItemPaddingLeft"
+    android:paddingRight="?android:attr/listPreferredItemPaddingRight"
+    android:layout_height="wrap_content"
+    android:minHeight="?android:attr/listPreferredItemHeightSmall"/>
