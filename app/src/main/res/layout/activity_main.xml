@@ -16,12 +16,12 @@
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
-    <fragment
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_below="@id/orderly_toolbar"
-        android:name="com.systems.sublime.orderly.AgendaFragment"
-        android:id="@+id/agenda_list"
+        android:id="@+id/fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent" />
 
     <ImageView
         android:id="@+id/orderly_menu_button"
@@ -36,7 +36,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="false"
         android:layout_alignParentEnd="false"
-        android:layout_alignRight="@id/agenda_list"/>
+        android:layout_alignRight="@id/fragment_container"/>
 
     <ImageView
         android:id="@+id/orderly_menu_circle"
@@ -51,7 +51,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="false"
         android:layout_alignParentEnd="false"
-        android:layout_alignRight="@id/agenda_list"/>
+        android:layout_alignRight="@id/fragment_container"/>
 
 </RelativeLayout>
 

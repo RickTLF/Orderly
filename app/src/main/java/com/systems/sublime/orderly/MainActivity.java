@@ -30,11 +30,34 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //menuDrawable = new MenuDrawable(this);
         setContentView(R.layout.activity_main);
+
+        // Add a toolbar.
         Toolbar toolbar = (Toolbar) findViewById(R.id.orderly_toolbar);
         setSupportActionBar(toolbar);
 
+        // Add the schedule manager.
         imageView = (ImageView) findViewById(R.id.orderly_menu_circle);
-        
+
+        // Check to see if the activity layout is using a frame layout.
+        if (findViewById(R.id.fragment_container) != null)            {
+
+
+            // If, however, we are being restored from a previous state,
+            // Then we don't need to do anything since we could end up
+            // with overlapping fragments.
+            if (savedInstanceState != null) {
+                return;
+            }
+
+            // Create a new fragment to be placed in the activity layout.
+            AgendaFragment agendaFragment = new AgendaFragment();
+
+            agendaFragment.setArguments(getIntent().getExtras());
+
+            // Add the fragment to the frame layout.
+            getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, agendaFragment);
+
+        }
 
     }
 
