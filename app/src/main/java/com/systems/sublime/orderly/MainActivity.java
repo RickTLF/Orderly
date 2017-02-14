@@ -15,10 +15,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 
-
-
 public class MainActivity extends AppCompatActivity {
-
     //MenuDrawable menuDrawable;
     ImageView imageView;
 
@@ -39,8 +36,7 @@ public class MainActivity extends AppCompatActivity {
         imageView = (ImageView) findViewById(R.id.orderly_menu_circle);
 
         // Check to see if the activity layout is using a frame layout.
-        if (findViewById(R.id.fragment_container) != null)            {
-
+        if (findViewById(R.id.fragment_container) != null)  {
 
             // If, however, we are being restored from a previous state,
             // Then we don't need to do anything since we could end up
@@ -51,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
 
             // Create a new fragment to be placed in the activity layout.
             AgendaFragment agendaFragment = new AgendaFragment();
-
             agendaFragment.setArguments(getIntent().getExtras());
 
             // Add the fragment to the frame layout.
